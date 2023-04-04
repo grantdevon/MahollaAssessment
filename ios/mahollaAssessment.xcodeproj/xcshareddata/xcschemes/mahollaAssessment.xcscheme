@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "mahollaAssessment.app"
-               BlueprintName = "mahollaAssessment"
-               ReferencedContainer = "container:mahollaAssessment.xcodeproj">
+               BuildableName = "MahollaAssessment.app"
+               BlueprintName = "MahollaAssessment"
+               ReferencedContainer = "container:MahollaAssessment.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "mahollaAssessmentTests.xctest"
-               BlueprintName = "mahollaAssessmentTests"
-               ReferencedContainer = "container:mahollaAssessment.xcodeproj">
+               BuildableName = "MahollaAssessmentTests.xctest"
+               BlueprintName = "MahollaAssessmentTests"
+               ReferencedContainer = "container:MahollaAssessment.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "mahollaAssessment.app"
-            BlueprintName = "mahollaAssessment"
-            ReferencedContainer = "container:mahollaAssessment.xcodeproj">
+            BuildableName = "MahollaAssessment.app"
+            BlueprintName = "MahollaAssessment"
+            ReferencedContainer = "container:MahollaAssessment.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "mahollaAssessment.app"
-            BlueprintName = "mahollaAssessment"
-            ReferencedContainer = "container:mahollaAssessment.xcodeproj">
+            BuildableName = "MahollaAssessment.app"
+            BlueprintName = "MahollaAssessment"
+            ReferencedContainer = "container:MahollaAssessment.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
