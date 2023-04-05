@@ -1,4 +1,3 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React, { FC } from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -26,5 +25,4 @@ const App: FC = () => {
 
 export default App
 
-const styles = StyleSheet.create({})
 

@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.mahollaassessment.app-mergeDebugResources-20:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.mahollaassessment.app-mergeDebugResources-27:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/grantsolomons/.gradle/caches/transforms-3/be9a285d7d94d789380b4b7ef5365ae2/transformed/appcompat-1.4.1/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/grantsolomons/.gradle/caches/transforms-3/7113a53cf9d7c5348bd443302f6867ba/transformed/material-1.1.0/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,177",
+                        "endColumns": "121,133",
+                        "endOffsets": "172,306"
+                    },
+                    "to": {
+                        "startLines": "11,12",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,874",
+                        "endColumns": "121,133",
+                        "endOffsets": "869,1003"
+                    }
+                },
+                {
+                    "source": "/Users/grantsolomons/.gradle/caches/transforms-3/9569b48c0b48f9c1d8a9e4e02e31129a/transformed/appcompat-1.4.1/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

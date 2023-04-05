@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.mahollaassessment.app-mergeDebugResources-20:/values-tr/values-tr.xml",
+            "outputFile": "com.mahollaassessment.app-mergeDebugResources-27:/values-tr/values-tr.xml",
             "map": [
                 {
-                    "source": "/Users/grantsolomons/.gradle/caches/transforms-3/be9a285d7d94d789380b4b7ef5365ae2/transformed/appcompat-1.4.1/res/values-tr/values-tr.xml",
+                    "source": "/Users/grantsolomons/.gradle/caches/transforms-3/9569b48c0b48f9c1d8a9e4e02e31129a/transformed/appcompat-1.4.1/res/values-tr/values-tr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/grantsolomons/.gradle/caches/transforms-3/08e1174eef2c209ea18090f1084adbcb/transformed/core-1.7.0/res/values-tr/values-tr.xml",
+                    "source": "/Users/grantsolomons/.gradle/caches/transforms-3/9f7fb71bde5a844340214ae1be438c8b/transformed/core-1.7.0/res/values-tr/values-tr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
