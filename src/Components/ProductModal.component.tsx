@@ -6,8 +6,6 @@ import { Badge } from 'react-native-elements'
 
 const ProductModal = ({ product, setModalVisable }: { product: any, setModalVisable: any }) => {
 
-  console.log(product.image);
-
   const productRatingColor = (rating: number) => {
     let badgeColor: string = 'success'
 
@@ -16,7 +14,7 @@ const ProductModal = ({ product, setModalVisable }: { product: any, setModalVisa
       return badgeColor
     }
 
-    if (rating < 2 ) {
+    if (rating < 2) {
       badgeColor = 'error'
       return badgeColor
     }
@@ -35,21 +33,20 @@ const ProductModal = ({ product, setModalVisable }: { product: any, setModalVisa
           color={"black"}
         />
 
-        <View style={styles.imageContainer}>
-          <Image source={{ uri: product.image }} style={styles.image} />
-        </View>
-        <Text style={styles.title}>{product.title}</Text>
-
-        <View style={styles.priceContainer}>
-          <Text style={styles.price}>R{product.price}</Text>
-          <Badge status={productRatingColor(product.rating.rate)} value={product.rating.rate}/>
-        </View>
-
-        <Text>Description:</Text>
-        <Text>{product.description}</Text>
-
       </TouchableOpacity>
 
+      <View style={styles.imageContainer}>
+        <Image source={{ uri: product.image }} style={styles.image} />
+      </View>
+      <Text style={styles.title}>{product.title}</Text>
+
+      <View style={styles.priceContainer}>
+        <Text style={styles.price}>R{product.price}</Text>
+        <Badge status={productRatingColor(product.rating.rate)} value={product.rating.rate} />
+      </View>
+
+      <Text style={styles.descriptionTitle}>Description:</Text>
+      <Text style={styles.description}>{product.description}</Text>
 
     </View>
   )
@@ -69,7 +66,7 @@ const styles = StyleSheet.create({
     padding: 10
   },
   title: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
     padding: 10,
     color: 'black'
@@ -94,5 +91,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'black',
     backgroundColor: "green"
+  },
+  descriptionTitle: {
+    fontWeight: 'bold',
+    fontSize: 17,
+    color: 'black',
+    padding: 10
+  },
+  description: {
+    color: 'black',
+    paddingHorizontal: 10
   }
 })
