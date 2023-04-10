@@ -1,13 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { IProduct } from "../../Constants/product.interface";
 import { fetchData } from "../../Services/API/products.service";
-import { useDispatch } from "react-redux";
 
 export const fetchProducts = createAsyncThunk("products/fetchProducts",
     async () => {
         try {
             let products: IProduct = await fetchData() as IProduct
-            console.log(products);
             return products
         } catch (error) {
             console.log(error);
