@@ -1,15 +1,34 @@
 import { Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { categories } from '../Constants/categories.constant';
+import { IProduct } from '../Constants/product.interface';
+import { useSelector } from 'react-redux';
+import Icon from 'react-native-vector-icons/AntDesign'
 
-const Filter = () => {
+const Filter = ({ setFilteredProducts }: { setFilteredProducts: any }) => {
 
     const [currentCategory, setCurrentCategory] = useState('Category')
     const [showModal, setShowModal] = useState<boolean>(false)
 
+    const { products } = useSelector(state => state.productsStore)
+
+
     const handleCategorySelect = (text: string) => {
         setCurrentCategory(text)
+        filterItems(text)
         setShowModal(false)
+    }
+
+    const filterItems = (category: string) => {
+        const filteredItems = products.filter((product: IProduct) => {
+            return product.category === category
+        })
+        setFilteredProducts(filteredItems)
+    }
+
+    const resetFilter = () => {
+        setCurrentCategory('Category')
+        setFilteredProducts(products)
     }
 
     const CategoryList = () => {
@@ -19,6 +38,7 @@ const Filter = () => {
                     categories.map(category => {
                         return (
                             <Text
+                                key={category}
                                 style={styles.text}
                                 onPress={() => handleCategorySelect(category)}>
                                 {category}
@@ -32,23 +52,55 @@ const Filter = () => {
 
     return (
         <View style={styles.container}>
-            <Text>Categories</Text>
-            <Text onPress={() => setShowModal(true)}>{currentCategory}</Text>
+            <Text>Products</Text>
+            <View
+                style={styles.categorySelect}>
+
+                <Text style={styles.categoryText}>{currentCategory}</Text>
+
+                <TouchableOpacity
+                    onPress={() => setShowModal(true)}
+                >
+                    <Icon
+                        name='caretdown'
+                        size={15}
+                        color={"black"}
+                    />
+                </TouchableOpacity>
+
+                {
+                    currentCategory !== 'Category'
+                    &&
+                    <TouchableOpacity
+                        onPress={resetFilter}
+                    >
+                        <Icon
+                        style={{
+                            alignItems: 'center', paddingLeft: 10
+                        }}
+                            name='close'
+                            size={15}
+                            color={"black"}
+                        />
+                    </TouchableOpacity>
+                }
+
+            </View>
+
             <Modal
                 visible={showModal}
                 animationType='slide'
                 transparent
             >
-                <TouchableOpacity 
-                style={styles.modalContainer} 
-                onPress={() => setShowModal(false)}
+                <TouchableOpacity
+                    style={styles.modalContainer}
+                    onPress={() => setShowModal(false)}
                 >
                     <View style={styles.modalContent}>
                         <CategoryList />
                     </View>
                 </TouchableOpacity>
             </Modal>
-
 
         </View>
     )
@@ -60,7 +112,8 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginHorizontal: 10
+        marginHorizontal: 10,
+        padding: 15
     },
     modalContainer: {
         backgroundColor: 'rgba(0,0,0,0.4)',
@@ -79,5 +132,12 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 20,
         paddingVertical: 10
+    },
+    categorySelect: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    categoryText: {
+        paddingHorizontal: 10
     }
 })
