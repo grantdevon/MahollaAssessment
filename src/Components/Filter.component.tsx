@@ -4,6 +4,7 @@ import { categories } from '../Constants/categories.constant';
 import { IProduct } from '../Constants/product.interface';
 import { useSelector } from 'react-redux';
 import Icon from 'react-native-vector-icons/AntDesign'
+import ShoppingBag from 'react-native-vector-icons/FontAwesome'
 
 const Filter = ({ setFilteredProducts }: { setFilteredProducts: any }) => {
 
@@ -52,7 +53,15 @@ const Filter = ({ setFilteredProducts }: { setFilteredProducts: any }) => {
 
     return (
         <View style={styles.container}>
-            <Text>Products</Text>
+            <View style={styles.header}>
+                <ShoppingBag
+                    name='shopping-bag'
+                    size={15}
+                    color={"black"}
+                />
+                <Text style={styles.mainText}>Products</Text>
+
+            </View>
             <View
                 style={styles.categorySelect}>
 
@@ -75,9 +84,9 @@ const Filter = ({ setFilteredProducts }: { setFilteredProducts: any }) => {
                         onPress={resetFilter}
                     >
                         <Icon
-                        style={{
-                            alignItems: 'center', paddingLeft: 10
-                        }}
+                            style={{
+                                alignItems: 'center', paddingLeft: 10
+                            }}
                             name='close'
                             size={15}
                             color={"black"}
@@ -138,6 +147,15 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     categoryText: {
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        color: 'grey'
+    },
+    mainText: {
+        color: 'grey',
+        paddingLeft: 10
+    },
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center'
     }
 })

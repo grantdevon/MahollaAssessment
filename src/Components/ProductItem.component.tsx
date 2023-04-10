@@ -1,16 +1,16 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import { Badge } from 'react-native-elements'
+import { productRatingColor } from '../Helpers/Product.helper'
 
 const ProductItem = (
   { item, setModalVisable, setCurrentProduct, modalVisable }:
     { item: any, setModalVisable: any, setCurrentProduct: any, modalVisable: any }) => {
 
 
-  const handlePress = (item:any) => {
+  const handlePress = (item: any) => {
     setModalVisable(!modalVisable)
     setCurrentProduct(item)
-    console.log(item);
-    
   }
 
   return (
@@ -27,7 +27,7 @@ const ProductItem = (
       </View>
       <View style={styles.metaData}>
         <Text>R{item.price}</Text>
-        <Text>{item.rating.rate}</Text>
+        <Badge containerStyle={{margin: 10}} status={productRatingColor(item.rating.rate)} value={item.rating.rate} />
       </View>
     </TouchableOpacity>
   )

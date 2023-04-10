@@ -2,24 +2,10 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Badge } from 'react-native-elements'
+import { productRatingColor } from '../Helpers/Product.helper';
 
 
 const ProductModal = ({ product, setModalVisable }: { product: any, setModalVisable: any }) => {
-
-  const productRatingColor = (rating: number) => {
-    let badgeColor: string = 'success'
-
-    if (rating < 4 && rating > 2) {
-      badgeColor = 'warning'
-      return badgeColor
-    }
-
-    if (rating < 2) {
-      badgeColor = 'error'
-      return badgeColor
-    }
-    return badgeColor
-  }
 
   return (
     <View style={styles.container}>
