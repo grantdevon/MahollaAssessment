@@ -9,7 +9,14 @@ const BottomTabNavigation = () => {
   return (
     <Tab.Navigator>
       {/* <Tab.Screen name="Discover" component={Discover} /> */}
-      <Tab.Screen name="Products" component={Products} />
+      <Tab.Screen 
+      name="Products" 
+      component={Products} 
+      options={
+        {
+          headerShown: false
+        }
+      }/>
     </Tab.Navigator>
   )
 }

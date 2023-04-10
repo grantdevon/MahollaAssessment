@@ -1,41 +1,36 @@
 import { FlatList, Modal, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { fetchData } from '../../Services/API/products.service'
 import ProductItem from '../../Components/ProductItem.component'
 import ProductModal from '../../Components/ProductModal.component'
+import { useSelector } from 'react-redux'
+import Loading from '../../Components/Loading.component'
 
 const Products = () => {
-
-  const [products, setProducts] = useState([])
+  
+  const {products, loading} = useSelector(state => state.productsStore)
+  console.log(loading);
+    
   const [currentProduct, setCurrentProduct] = useState(null)
   const [modalVisable, setModalVisable] = useState<boolean>(false)
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      fetchData().then(data => {
-        console.log(data[0]);
-
-        setProducts(data)
-      }).catch(err => {
-        setProducts([])
-        return []
-      })
-    }
-
-    fetchProducts()
-  }, [])
-
+  if (loading) {
+    return (
+      <Loading text='Fetching Products'/>
+    )
+  }
 
   return (
     <View style={styles.container}>
       <FlatList
         data={products}
-        renderItem={(product) => <ProductItem
+        renderItem={(product) => 
+        <ProductItem
           item={product.item} 
           setCurrentProduct={setCurrentProduct}
           setModalVisable={setModalVisable}
           modalVisable={modalVisable}
           />}
+          // build refresh handler
       />
       <Modal
         animationType='slide'

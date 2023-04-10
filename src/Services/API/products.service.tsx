@@ -1,11 +1,13 @@
-//TODO create interface
+import { productsAPI } from "../../Constants/api.constant"
+import { IProduct } from "../../Constants/product.interface"
 
-export const fetchData = () => {
+export const fetchData = async () => {
     return new Promise((resolve, reject) => {
-        fetch('https://fakestoreapi.com/products')
+        fetch(productsAPI)
         .then(reponse => reponse.json())
         .then(data => {
-            resolve(data)
+            let product: IProduct = data            
+            resolve(product)
         }).catch(err => {
             console.log(err)
             reject([])
