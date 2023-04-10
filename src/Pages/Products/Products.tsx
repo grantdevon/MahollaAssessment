@@ -1,12 +1,12 @@
-import { FlatList, Modal, RefreshControl, StyleSheet, Text, View } from 'react-native'
+import { FlatList, Modal, RefreshControl, StyleSheet, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import ProductItem from '../../Components/ProductItem.component'
 import ProductModal from '../../Components/ProductModal.component'
 import { useDispatch, useSelector } from 'react-redux'
 import Loading from '../../Components/Loading.component'
 import Search from '../../Components/Search.component'
-import { fetchData } from '../../Services/API/products.service'
 import { fetchProducts } from '../../Redux/Reducers/Product.reducer'
+import Empty from '../../Components/Empty.component'
 
 const Products = () => {
 
@@ -66,7 +66,7 @@ const Products = () => {
             modalVisable={modalVisable}
           />}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
-      // build a no results component
+        ListEmptyComponent={Empty}
       />
       <Modal
         animationType='slide'

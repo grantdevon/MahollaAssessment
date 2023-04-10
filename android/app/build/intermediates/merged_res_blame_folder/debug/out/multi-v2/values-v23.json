@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.mahollaassessment.app-mergeDebugResources-27:/values-v23/values-v23.xml",
+            "outputFile": "com.mahollaassessment.app-mergeDebugResources-28:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/Users/grantsolomons/.gradle/caches/transforms-3/7113a53cf9d7c5348bd443302f6867ba/transformed/material-1.1.0/res/values-v23/values-v23.xml",
