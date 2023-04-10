@@ -7,6 +7,7 @@ import Loading from '../../Components/Loading.component'
 import Search from '../../Components/Search.component'
 import { fetchProducts } from '../../Redux/Reducers/Product.reducer'
 import Empty from '../../Components/Empty.component'
+import Filter from '../../Components/Filter.component'
 
 const Products = () => {
 
@@ -55,6 +56,7 @@ const Products = () => {
 
   return (
     <View style={styles.container}>
+      <Filter />
       <Search searchText={searchText} setSearchText={setSearchText} />
       <FlatList
         data={filteredProducts}

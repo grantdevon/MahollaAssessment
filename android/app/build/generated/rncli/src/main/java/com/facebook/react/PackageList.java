@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 // @klarna/react-native-vector-drawable
 import com.klarna.vectordrawable.VectorDrawablePackage;
+// @react-native-picker/picker
+import com.reactnativecommunity.picker.RNCPickerPackage;
 // lottie-react-native
 import com.airbnb.android.react.lottie.LottiePackage;
 // react-native-safe-area-context
@@ -67,6 +69,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new VectorDrawablePackage(),
+      new RNCPickerPackage(),
       new LottiePackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),

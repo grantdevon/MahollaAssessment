@@ -31,6 +31,9 @@ com.mahollaassessment.app-mergeDebugResources-29 /Users/grantsolomons/repos/Maho
 com.mahollaassessment.app-merged_res-30 /Users/grantsolomons/repos/MahollaAssessment/android/app/build/intermediates/merged_res/debug
 com.mahollaassessment.app-debug-31 /Users/grantsolomons/repos/MahollaAssessment/android/app/src/debug/res
 com.mahollaassessment.app-main-32 /Users/grantsolomons/repos/MahollaAssessment/android/app/src/main/res
-com.mahollaassessment.app-packaged_res-33 /Users/grantsolomons/repos/MahollaAssessment/node_modules/lottie-react-native/android/build/intermediates/packaged_res/debug
-com.mahollaassessment.app-packaged_res-34 /Users/grantsolomons/repos/MahollaAssessment/node_modules/react-native-safe-area-context/android/build/intermediates/packaged_res/debug
-com.mahollaassessment.app-packaged_res-35 /Users/grantsolomons/repos/MahollaAssessment/node_modules/react-native-screens/android/build/intermediates/packaged_res/debug
+com.mahollaassessment.app-packaged_res-33 /Users/grantsolomons/repos/MahollaAssessment/node_modules/@klarna/react-native-vector-drawable/android/build/intermediates/packaged_res/debug
+com.mahollaassessment.app-packaged_res-34 /Users/grantsolomons/repos/MahollaAssessment/node_modules/@react-native-picker/picker/android/build/intermediates/packaged_res/debug
+com.mahollaassessment.app-packaged_res-35 /Users/grantsolomons/repos/MahollaAssessment/node_modules/lottie-react-native/android/build/intermediates/packaged_res/debug
+com.mahollaassessment.app-packaged_res-36 /Users/grantsolomons/repos/MahollaAssessment/node_modules/react-native-safe-area-context/android/build/intermediates/packaged_res/debug
+com.mahollaassessment.app-packaged_res-37 /Users/grantsolomons/repos/MahollaAssessment/node_modules/react-native-screens/android/build/intermediates/packaged_res/debug
+com.mahollaassessment.app-packaged_res-38 /Users/grantsolomons/repos/MahollaAssessment/node_modules/react-native-vector-icons/android/build/intermediates/packaged_res/debug
