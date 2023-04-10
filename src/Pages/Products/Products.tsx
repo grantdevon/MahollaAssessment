@@ -56,7 +56,7 @@ const Products = () => {
 
   return (
     <View style={styles.container}>
-      <Filter setFilteredProducts={setFilteredProducts} filteredProducts={filteredProducts}/>
+      <Filter setFilteredProducts={setFilteredProducts}/>
       <Search searchText={searchText} setSearchText={setSearchText} />
       <FlatList
         data={filteredProducts}
